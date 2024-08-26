@@ -2,15 +2,15 @@
 
 import os
 from pathlib import Path
+import dj_database_url
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = '7=m!x9iqy0^#axio8lpbm7!8fs)r2)a(ny4qbx5=8&x+w91hk='
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['bookhub-7ogc.onrender.com']
-
+ALLOWED_HOSTS = ['bookhub-7ogc.onrender.com', 'localhost', '127.0.0.1']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -69,7 +69,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'book_library.wsgi.application'
 
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -100,7 +99,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
@@ -119,14 +117,7 @@ LOGIN_REDIRECT_URL = 'home'
 ACCOUNT_LOGOUT_REDIRECT_URL = 'home'
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'book_library_edk2',
-        'USER': 'admin',
-        'PASSWORD': 'nqj2bTfvuTGebkpE7J22knCidRWpCljF',
-        'HOST': 'dpg-cr6c7uhu0jms73bneb9g-a',
-        'PORT': '5432',
-    }
+    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
 }
 
 # Email settings for sending password reset emails
