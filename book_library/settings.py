@@ -4,10 +4,10 @@ import dj_database_url
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Secret key should be stored in an environment variable for security.
+
 SECRET_KEY = os.environ.get('SECRET_KEY', 'your-default-secret-key')
 
-DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+DEBUG = False
 
 ALLOWED_HOSTS = ['bookhub-7ogc.onrender.com', 'localhost']
 
