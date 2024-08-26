@@ -92,3 +92,5 @@ Start the Django development server:
 python manage.py runserver
 
 Visit http://127.0.0.1:8000/ in your web browser to access the site. Log in using the superuser credentials you created to access the admin interface at http://127.0.0.1:8000/admin/.
+
+https://bookhub-7ogc.onrender.com/
