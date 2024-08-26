@@ -39,8 +39,7 @@ Virtualenv
 **Step 1:**
 Clone the Repository
 Clone the repository from GitHub to your local machine:
-git clone [https://github.com/yourusername/your-repository.git](https://github.com/ShaneZD/BookHub.git)
-cd your-repository
+**git clone https://github.com/ShaneZD/BookHub.git**
 
 **Step 2:**
 Set Up a Virtual Environment
