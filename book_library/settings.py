@@ -8,7 +8,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = '7=m!x9iqy0^#axio8lpbm7!8fs)r2)a(ny4qbx5=8&x+w91hk='
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['bookhub-7ogc.onrender.com', 'localhost', '127.0.0.1']
 
