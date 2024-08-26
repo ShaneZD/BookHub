@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ book.title }}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            {% if book.cover_image %}
+                <img src="{{ book.cover_image.url }}" class="img-fluid" alt="{{ book.title }}">
+            {% else %}
+                <div class="bg-secondary text-white d-flex align-items-center justify-content-center" style="height: 300px;">
+                    <span>No Cover</span>
+                </div>
+            {% endif %}
+        </div>
+        <div class="col-md-8">
+            <h1>{{ book.title }}</h1>
+            <p><strong>Author:</strong> {{ book.author }}</p>
+            <p><strong>ISBN:</strong> {{ book.isbn }}</p>
+            <p><strong>Publication Date:</strong> {{ book.publication_date }}</p>
+            <p><strong>Description:</strong> {{ book.description }}</p>
+            <a href="{% url 'book_update' book.pk %}" class="btn btn-primary">Edit</a>
+            <a href="{% url 'book_delete' book.pk %}" class="btn btn-danger">Delete</a>
+        </div>
+    </div>
+
+    <h2 class="mt-4">Reviews</h2>
+    {% for review in reviews %}
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">{{ review.user.username }}</h5>
+                <p class="card-text">Rating: {{ review.rating }}/5</p>
+                <p class="card-text">{{ review.comment }}</p>
+                <p class="card-text"><small class="text-muted">{{ review.created_at|date:"M d, Y" }}</small></p>
+            </div>
+        </div>
+    {% empty %}
+        <p>No reviews yet.</p>
+    {% endfor %}
+    <a href="{% url 'review_create' book.pk %}" class="btn btn-success">Add Review</a>
+</div>
+{% endblock %}
