@@ -4,11 +4,11 @@ import dj_database_url
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Security key should be kept secret and retrieved from the environment
+
 SECRET_KEY = os.environ.get('SECRET_KEY', 'your-default-secret-key')
 
-# Set DEBUG to False in production
-DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+
+DEBUG = True
 
 ALLOWED_HOSTS = ['bookhub-7ogc.onrender.com', 'localhost']
 
