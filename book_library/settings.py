@@ -121,10 +121,10 @@ ACCOUNT_LOGOUT_REDIRECT_URL = 'home'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'book_library',
-        'USER': 'booklibrary_user',
-        'PASSWORD': 'booklibrary',
-        'HOST': 'localhost',
+        'NAME': 'book_library_edk2',
+        'USER': 'admin',
+        'PASSWORD': 'nqj2bTfvuTGebkpE7J22knCidRWpCljF',
+        'HOST': 'dpg-cr6c7uhu0jms73bneb9g-a',
         'PORT': '5432',
     }
 }
