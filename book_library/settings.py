@@ -4,10 +4,11 @@ import dj_database_url
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
+# Security key should be kept secret and retrieved from the environment
 SECRET_KEY = os.environ.get('SECRET_KEY', 'your-default-secret-key')
 
-DEBUG = True
+# Set DEBUG to False in production
+DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = ['bookhub-7ogc.onrender.com', 'localhost']
 
@@ -118,7 +119,7 @@ ACCOUNT_LOGOUT_REDIRECT_URL = 'home'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.environ.get('DATABASE_URL', 'postgresql://postgres:postgres@localhost:5432/mysite'),
+        default=os.environ.get('DATABASE_URL', 'postgresql://admin:nqj2bTfvuTGebkpE7J22knCidRWpCljF@dpg-cr6c7uhu0jms73bneb9g-a.frankfurt-postgres.render.com:5432/book_library_edk2'),
         conn_max_age=600
     )
 }
@@ -128,6 +129,6 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'Shanezd79@gmail.com'
-EMAIL_HOST_PASSWORD = 'uiyj vcfl fgek hooo'
-DEFAULT_FROM_EMAIL = 'Shanezd79@gmail.com'
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', 'Shanezd79@gmail.com')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', 'your-email-password')
+DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', 'Shanezd79@gmail.com')
