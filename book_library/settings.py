@@ -117,7 +117,14 @@ LOGIN_REDIRECT_URL = 'home'
 ACCOUNT_LOGOUT_REDIRECT_URL = 'home'
 
 DATABASES = {
-    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'book_library_edk2',
+        'USER': 'admin',
+        'PASSWORD': 'nqj2bTfvuTGebkpE7J22knCidRWpCljF',
+        'HOST': 'dpg-cr6c7uhu0jms73bneb9g-a',
+        'PORT': '5432',
+    }
 }
 
 # Email settings for sending password reset emails
