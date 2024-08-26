@@ -1,6 +1,7 @@
 BookHub!
 
 **Project Overview**
+
 BookHub is designed to be a user-friendly platform where book lovers can manage their personal libraries, share reviews, and communicate with other users. The application is built with robust user authentication, allowing secure access and management of user data.
 
 **Key Features**
