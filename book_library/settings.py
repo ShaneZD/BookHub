@@ -9,7 +9,7 @@ SECRET_KEY = '7=m!x9iqy0^#axio8lpbm7!8fs)r2)a(ny4qbx5=8&x+w91hk='
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [https://bookhub-7ogc.onrender.com/]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
