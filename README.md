@@ -5,6 +5,7 @@ BookHub!
 BookHub is designed to be a user-friendly platform where book lovers can manage their personal libraries, share reviews, and communicate with other users. The application is built with robust user authentication, allowing secure access and management of user data.
 
 **Key Features**
+
 User Registration and Authentication:
 
 Users can sign up, log in, and manage their profiles.
@@ -35,12 +36,14 @@ PostgreSQL (for database)
 Git (for version control)
 Virtualenv 
 
-**Step 1:** Clone the Repository
+**Step 1:**
+Clone the Repository
 Clone the repository from GitHub to your local machine:
 git clone https://github.com/yourusername/your-repository.git
 cd your-repository
 
-**Step 2:** Set Up a Virtual Environment
+**Step 2:**
+Set Up a Virtual Environment
 Create and activate a virtual environment to manage project dependencies:
 python3 -m venv venv
 source venv/bin/activate  # On Windows use `venv\Scripts\activate`
