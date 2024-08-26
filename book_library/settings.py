@@ -7,7 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get('SECRET_KEY', 'your-default-secret-key')
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['bookhub-7ogc.onrender.com', 'localhost']
 
