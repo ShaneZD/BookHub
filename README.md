@@ -1,5 +1,4 @@
-BookHub
-BookHub is a comprehensive web application that allows users to register, create, update, and manage their own book library, post reviews, and engage in messaging. This project is built with Django and utilizes a PostgreSQL database.
+BookHub!
 
 Project Overview
 BookHub is designed to be a user-friendly platform where book lovers can manage their personal libraries, share reviews, and communicate with other users. The application is built with robust user authentication, allowing secure access and management of user data.
